@@ -1,10 +1,16 @@
 import React from "react";
-// import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Platform, StatusBar } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <View
+        style={{
+          backgroundColor: "#d90429",
+          width: "50%",
+          height: 70,
+        }}
+      ></View>
       <Text>Marshal Rocks!</Text>
     </View>
   );

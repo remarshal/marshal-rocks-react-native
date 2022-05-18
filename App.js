@@ -1,14 +1,17 @@
 import React from "react";
 import { StyleSheet, Text, View, Platform, StatusBar } from "react-native";
+import { useDeviceOrientation } from "@react-native-community/hooks";
 
 export default function App() {
+  const { landscape } = useDeviceOrientation();
+
   return (
     <View style={styles.container}>
       <View
         style={{
           backgroundColor: "#d90429",
-          width: "50%",
-          height: 70,
+          width: "100%",
+          height: landscape ? "70%" : "30%",
         }}
       ></View>
       <Text>Marshal Rocks!</Text>
